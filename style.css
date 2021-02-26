@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+
+body {
+    font: 3em "Fjalla One";
+    background: linear-gradient(
+        to right,
+        rgb(255, 183, 66),
+        rgb(112, 210, 255)
+    );
+}
+
+#calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 1%;
+    margin: 4% auto;
+    width: 50%;
+    height: 97vh;
+}
+
+#output-display {
+    grid-column: 1 / span 4;
+    height: 2.5em;
+    background-color: rgb(188, 245, 255);
+    border: 1px solid rgb(62, 136, 160);
+    border-radius: 4px;
+    margin: 0.5%;
+    padding: 2%;
+    opacity: 0.9;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#previous-operand {
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 1.5rem;
+}
+
+#current-operand {
+    color: black;
+    font-size: 2.5rem;
+}
+
+button {
+    border: 1px solid black;
+    border-radius: 10px;
+    font: inherit;
+    outline: none;
+    user-select: none;
+    transition: background-color 0.2s;
+    opacity: 0.9;
+}
+
+button:active {
+    box-shadow: rgba(110, 110, 110, 0.5) 0px 30px 60px -12px inset,
+        rgba(0, 0, 0, 0.75) 0px 18px 36px -18px inset;
+}
+
+.clear-buttons {
+    grid-column: span 2;
+    color: rgb(117, 0, 0);
+    background-color: rgb(235, 64, 64);
+}
+
+.clear-buttons:hover {
+    color: white;
+    background-color: rgb(211, 41, 41);
+}
+
+.number-btn {
+    color: rgb(0, 45, 66);
+    background-color: rgb(112, 210, 255);
+    border: 2px solid rgb(46, 112, 138);
+}
+
+.number-btn:hover {
+    color: rgb(112, 210, 255);
+    background-color: rgb(0, 45, 66);
+}
+
+.operation-btn {
+    color: rgb(93, 50, 0);
+    background-color: rgb(255, 183, 66);
+    border: 2px solid rgb(187, 120, 58);
+}
+
+.operation-btn:hover {
+    color: rgb(255, 183, 66);
+    background-color: rgb(93, 50, 0);
+}
+
+#equals-btn {
+    background-color: rgb(25, 25, 25);
+    color: white;
+}
+
+#equals-btn:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 1025px) {
+    #calculator {
+        width: 98%;
+    }
+}
